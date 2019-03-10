@@ -42,7 +42,7 @@ async def on_message(message):
     if message.content.startswith('+coinflip'):
         randomlist = ["head", "tail", ]
         await client.send_message(message.channel, (random.choice(randomlist)))
-    if message.content == '-help':
+    if message.content == '+help':
         await client.send_message(message.channel,'+web,+cheers,+coinflip')
 
 
