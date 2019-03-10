@@ -8,7 +8,7 @@ from discord import Game
 
 
 Client = discord.client
-client = commands.Bot(command_prefix = '-')
+client = commands.Bot(command_prefix = '+')
 Clientdiscord = discord.Client()
 
 
@@ -33,17 +33,17 @@ async def on_message(message):
 
 @client.event
 async def on_message(message):
-    if message.content == '-web':
+    if message.content == '+web':
         await client.send_message(message.channel,'http://www.gck.clanweb.eu/')
-    if message.content == '-cheers':
+    if message.content == '+cheers':
         em = discord.Embed(description='Cheers')
         em.set_image(url='https://cdn.discordapp.com/attachments/528194410924605440/529441936323510273/download_1.jpg')
         await client.send_message(message.channel, embed=em)
-    if message.content.startswith('-coinflip'):
+    if message.content.startswith('+coinflip'):
         randomlist = ["head", "tail", ]
         await client.send_message(message.channel, (random.choice(randomlist)))
     if message.content == '-help':
-        await client.send_message(message.channel,'-web,-cheers,-coinflip')
+        await client.send_message(message.channel,'+web,+cheers,+coinflip')
 
 
 
