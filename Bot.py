@@ -12,8 +12,6 @@ client = commands.Bot(command_prefix = '-')
 Clientdiscord = discord.Client()
 
 
-TOKEN = ("NTU0MjQ4MzA0NTgyNDU5NDA3.D2Z4aA.VUBubYLveezRr0krh110z-GW_zI")
-
 @client.event
 async def on_member_join(member):
     print('Recognised that a member called ' + member.name + ' joined')
@@ -55,4 +53,4 @@ async def on_message(message):
     print('{}: {}'.format(author, content))
 
 
-client.run('TOKEN')
+client.run('NTU0MjQ4MzA0NTgyNDU5NDA3.D2Z4aA.VUBubYLveezRr0krh110z-GW_zI')
