@@ -45,11 +45,13 @@ async def on_message(message):
         randomlist = ["head", "tail", ]
         await client.send_message(message.channel, (random.choice(randomlist)))
     if message.content == '-prikazy':
-        await client.send_message(message.channel,'-web,-cheers,-coinflip,-vyhody,-pomoc')
+        await client.send_message(message.channel,'-web,-cheers,-coinflip,-vyhody,-pomoc,-ts')
     if message.content == '-vyhody':
         await client.send_message(message.channel,'http://futurik.buycraft.net/')
     if message.content == '-pomoc':
         await client.send_message(message.channel,'Pro pomoc kontaktujte kohokoli z AT.')
+    if message.content == '-ts':
+        await client.send_message(message.channel,'81.0.217.180:7399')
 
 
 
