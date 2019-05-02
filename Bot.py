@@ -23,7 +23,7 @@ async def on_member_join(member):
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='with ATLANTIDA'))
+    await client.change_presence(game=Game(name='-pomoc'))
     print('Bot Is Running Sucesfully')
 
 
