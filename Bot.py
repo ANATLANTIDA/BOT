@@ -8,14 +8,16 @@ from discord import Game
 
 
 Client = discord.client
-client = commands.Bot(command_prefix = '+')
+client = commands.Bot(command_prefix = '-')
 Clientdiscord = discord.Client()
 
+
+TOKEN = ("NTczNDkxODgzOTc2ODE4Njk4.XMroNg.Pzwl-RFnKN_qTQFcqeFmllynIj0")
 
 @client.event
 async def on_member_join(member):
     print('Recognised that a member called ' + member.name + ' joined')
-    await client.send_message(member, 'Welcome in Official [A.N.A] ATLANTIDA discord for help write "-help"')
+    await client.send_message(member, 'Welcome in Official MajklCraft discord for help write "-pomoc"')
     print('Sent message to ' + member.name)
 
 
@@ -33,17 +35,21 @@ async def on_message(message):
 
 @client.event
 async def on_message(message):
-    if message.content == '+web':
-        await client.send_message(message.channel,'http://www.gck.clanweb.eu/')
-    if message.content == '+cheers':
+    if message.content == '-web':
+        await client.send_message(message.channel,'www.futurik.majklcraft.eu')
+    if message.content == '-cheers':
         em = discord.Embed(description='Cheers')
         em.set_image(url='https://cdn.discordapp.com/attachments/528194410924605440/529441936323510273/download_1.jpg')
         await client.send_message(message.channel, embed=em)
-    if message.content.startswith('+coinflip'):
+    if message.content.startswith('-coinflip'):
         randomlist = ["head", "tail", ]
         await client.send_message(message.channel, (random.choice(randomlist)))
-    if message.content == '+help':
-        await client.send_message(message.channel,'+web,+cheers,+coinflip')
+    if message.content == '-prikazy':
+        await client.send_message(message.channel,'-web,-cheers,-coinflip,-vyhody,-pomoc')
+    if message.content == '-vyhody':
+        await client.send_message(message.channel,'http://futurik.buycraft.net/')
+    if message.content == '-pomoc':
+        await client.send_message(message.channel,'Pro pomoc kontaktujte kohokoli z AT.')
 
 
 
@@ -53,4 +59,4 @@ async def on_message(message):
     print('{}: {}'.format(author, content))
 
 
-client.run('NTU0MjQ4MzA0NTgyNDU5NDA3.D2Z4aA.VUBubYLveezRr0krh110z-GW_zI')
+client.run(TOKEN)
